@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <title>Web Camera</title>
+    <link rel="stylesheet" href="/css/index.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/angular.js"></script>
+    <script src="/js/angular-resource.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/IndexController.js"></script>
+</head>
+
+<body ng-init="init()" ng-controller="IndexController">
+
+<div class="buttonsArea">
+
+    <table>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <div class="button">
+                    <div class="one-button">
+                        <div class="button-icon up" ng-click="moveUp()">
+                            <i class="fa fa-caret-up"></i>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <div class="button" ng-click="moveLeft()">
+                    <div class="one-button">
+                        <div class="button-icon left">
+                            <i class="fa fa-caret-left"></i>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+            </td>
+            <td>
+                <div class="button" ng-click="moveRight()">
+                    <div class="one-button">
+                        <div class="button-icon right">
+                            <i class="fa fa-caret-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <div class="button" ng-click="moveDown()">
+                    <div class="one-button">
+                        <div class="button-icon down">
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+
+<div class="screenArea"><img ng-src="{{imageSrc}}" width="800" alt=""/></div>
+
+<div class="errorArea">
+{{msg}}
+</div>
+
+</body>
+</html>
